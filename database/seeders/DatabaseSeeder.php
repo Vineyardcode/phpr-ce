@@ -16,27 +16,28 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory(7)->create();
 
-        Listing::create(
-            [
-                'title' => 'Laravel Senior Developer',
-                'tags' => 'laravel, javascript',
-                'company' => 'Acme Corp',
-                'location' => 'Boston, MA',
-                'email' => 'email1@email.com',
-                'website' => 'https://www.acme.com',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?'
-            ]);
+        Listing::factory(7)->create();
+        // Listing::create(
+        //     [
+        //         'title' => 'Laravel Senior Developer',
+        //         'tags' => 'laravel, javascript',
+        //         'company' => 'Acme Corp',
+        //         'location' => 'Boston, MA',
+        //         'email' => 'email1@email.com',
+        //         'website' => 'https://www.acme.com',
+        //         'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?'
+        //     ]);
 
-        Listing::create(
-            [
-                'title' => 'Laravel Developer',
-                'tags' => 'laravel, vue, javascript',
-                'company' => 'Wayne Enterprises',
-                'location' => 'Gotham, NY',
-                'email' => 'email3@email.com',
-                'website' => 'https://www.wayneenterprises.com',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?'
-            ]);
+        // Listing::create(
+        //     [
+        //         'title' => 'Laravel Developer',
+        //         'tags' => 'laravel, vue, javascript',
+        //         'company' => 'Wayne Enterprises',
+        //         'location' => 'Gotham, NY',
+        //         'email' => 'email3@email.com',
+        //         'website' => 'https://www.wayneenterprises.com',
+        //         'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?'
+        //     ]);
 
 
         // \App\Models\User::factory()->create([
