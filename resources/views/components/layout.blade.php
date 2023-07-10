@@ -8,6 +8,8 @@
 
         @vite('./resources/css/app.css')
         <title class="text-blue-300">PHPRÁCE</title>
+        <script src="//unpkg.com/alpinejs" defer></script>
+
     </head>
     <body class="mb-48">
         <nav class="flex justify-between items-center mb-4">
@@ -17,7 +19,7 @@
             <ul class="flex space-x-6 mr-6 text-lg">
                 <li>
                     <a href="register.html" class="hover:text-laravel"
-                        ><i class="fa-solid fa-user-plus"></i> Register</a
+                        ><i class="fa-solid fa-user-plus"></i>Register</a
                     >
                 </li>
                 <li>
@@ -52,6 +54,6 @@
             >Post Job</a
         >
     </footer>
-
+    <x-flash-message />
 </body>
 </html>
