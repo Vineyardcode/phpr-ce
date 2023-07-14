@@ -59,6 +59,14 @@
                 </a>
             </x-card>
 
+            <form method="POST" action="/listings/{{$listing->id}}">
+
+                    @csrf
+                    @method('DELETE')
+                    <button class="text-red-500">Delete post</button>
+
+            </form>
+
         </div>
     </div>
 </x-layout>

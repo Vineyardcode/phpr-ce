@@ -27,10 +27,14 @@ Route::post('/listings', [ListingController::class, 'store']);
 //show edit form
 Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
 
-//edit submit
+//update listing
 Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
+//delete listing
+Route::delete('/listings/{listing}', [ListingController::class, 'smazat']);
 
 // single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
-
+// show register form
+Route::get('/register', [UserController::class, 'register']);

@@ -77,4 +77,12 @@ class ListingController extends Controller
 
         return back()->with('message', 'Listing updated successfully');
     }
+
+    //delete
+
+    public function smazat(Request $request, Listing $listing) {
+
+        $listing->delete();
+        return redirect('/')->with('message', 'Post deleted successfully');
+    }
 }
