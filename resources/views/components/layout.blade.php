@@ -7,9 +7,8 @@
         <link rel="icon" href="images/favicon.ico" />
 
         @vite('./resources/css/app.css')
-        <title class="text-blue-300">PHPRÁCE</title>
+        <title class="text-blue-300">PHPJOBS</title>
         <script src="//unpkg.com/alpinejs" defer></script>
-
     </head>
 
 
@@ -17,9 +16,7 @@
 
 
         <nav class="flex justify-between items-center mb-4">
-            <a href="/"
-                ><img class="w-24" src="{{asset('images/logo.png')}}" alt="" class="logo"
-            /></a>
+
             <ul class="flex space-x-6 mr-6 text-lg">
                 @auth
                 <li>
@@ -68,7 +65,8 @@
 
 
     <footer
-    class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-orange-700 text-slate-300 h-24 mt-24 opacity-90 md:justify-center"
+    class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold h-24 mt-24 opacity-90 md:justify-center"
+    style="background-color: #787CB5"
     >
         <p class="ml-2">Copyright &copy; 2023, All Rights reserved</p>
 

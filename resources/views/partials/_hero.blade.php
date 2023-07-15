@@ -1,24 +1,18 @@
-<section
-class="relative h-72 bg-laravel flex flex-col justify-center align-center text-center space-y-4 mb-4"
->
-<div
-    class="absolute top-0 left-0 w-full h-full opacity-10 bg-no-repeat bg-center"
-    style="background-image: url('images/laravel-logo.png')"
-></div>
+<div class="flex flex-col justify-center align-middle text-center gap-5">
 
-<div class="z-10">
-    <h1 class="text-6xl font-bold uppercase text-indigo-600">
-        PHP<span class="text-black">ráce</span>
-    </h1>
-    <p class="text-2xl text-gray-200 font-bold my-4">
-        Find or post PHP jobs & projects
+    <a href="/" class=" text-center flex flex-row justify-center">
+        <img class="w-72" src="{{ asset('images/logo.png') }}"/>
+    </a>
+
+
+    <p class="text-2xl font-bold">
+        Find or post PHP related jobs & projects
     </p>
-    <div>
-        <a
-            href="register.html"
-            class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black"
-            >Sign Up to List a Gig</a
-        >
-    </div>
+
+
+    <a href="/register"
+        class="inline-block border-2 py-2 px-4 rounded-xl uppercase hover:text-black hover:border-black" style="border: 2px solid #474A8A">
+        Sign Up to List a Gig
+    </a>
+
 </div>
-</section>
