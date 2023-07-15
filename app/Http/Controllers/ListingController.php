@@ -45,6 +45,8 @@ class ListingController extends Controller
             $formFields['logo'] = $request->file('logo')->store('logos', 'public');
         }
 
+        $formFields['user_id'] = auth()->id();
+
         Listing::create($formFields);
 
 
@@ -57,6 +59,11 @@ class ListingController extends Controller
     }
 
     public function update(Request $request, Listing $listing) {
+
+        //assure ownership of logged in user
+        if($listing->user_id != auth()->id()) {
+            abort(403, 'Unauthorized bogoya');
+        }
 
         $formFields = $request->validate([
             'title' => 'required',
@@ -82,7 +89,18 @@ class ListingController extends Controller
 
     public function smazat(Request $request, Listing $listing) {
 
+        if($listing->user_id != auth()->id()) {
+            abort(403, 'Unauthorized bogoya');
+        }
+
         $listing->delete();
         return redirect('/')->with('message', 'Post deleted successfully');
     }
+
+    public function manage() {
+
+
+        return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
+    }
+
 }
