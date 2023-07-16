@@ -14,9 +14,7 @@
         <div class="absolute top-2 right-2">
             <button
                 type="submit"
-                class="h-10 w-20 text-white rounded-lg"
-                style="background-color: #787CB5; hover: background-color: #474A8A;"
-
+                class="h-10 w-20 text-white rounded-lg bg-Dark_Slate_Blue hover:bg-Toolbox"
             >
                 Search
             </button>
