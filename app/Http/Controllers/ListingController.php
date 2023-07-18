@@ -9,7 +9,6 @@ use Illuminate\Validation\Rule;
 class ListingController extends Controller
 {
     public function index() {
-
         return view('listings.index', [
             'listings' => Listing::latest()->filter
             (request(['tag', 'search']))->simplePaginate(5)
@@ -17,19 +16,16 @@ class ListingController extends Controller
     }
 
     public function show(Listing $listing) {
-
         return view('listings.show', [
             'listing' => $listing
         ]);
     }
 
     public function create() {
-
         return view('listings.create');
     }
 
     public function store(Request $request) {
-
         $formFields = $request->validate([
             'title' => 'required',
             'company' => ['required', Rule::unique('listings', 'company')],
@@ -49,17 +45,14 @@ class ListingController extends Controller
 
         Listing::create($formFields);
 
-
         return redirect('/')->with('message', 'Listing created successfully');
     }
 
     public function edit(Listing $listing) {
-
         return view('listings.edit', ['listing' => $listing]);
     }
 
     public function update(Request $request, Listing $listing) {
-
         //assure ownership of logged in user
         if($listing->user_id != auth()->id()) {
             abort(403, 'Unauthorized bogoya');
@@ -86,7 +79,6 @@ class ListingController extends Controller
     }
 
     //delete
-
     public function smazat(Request $request, Listing $listing) {
 
         if($listing->user_id != auth()->id()) {
@@ -98,8 +90,6 @@ class ListingController extends Controller
     }
 
     public function manage() {
-
-
         return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
     }
 
